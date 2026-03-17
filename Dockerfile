@@ -16,8 +16,6 @@ COPY models/ ./models/
 
 # Installer les dépendances Python
 RUN pip install --upgrade pip
-RUN pip install numpy==1.24.3
-RUN pip install pandas==2.0.3
 RUN pip install -r requirements.txt
 
 # Exposer le port
