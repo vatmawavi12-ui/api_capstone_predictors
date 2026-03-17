@@ -21,7 +21,7 @@ RUN pip install pandas==2.0.3
 RUN pip install -r requirements.txt
 
 # Exposer le port
-EXPOSE 10000
+EXPOSE 8080
 
 # Commande de démarrage
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000"]
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:$PORT"]
